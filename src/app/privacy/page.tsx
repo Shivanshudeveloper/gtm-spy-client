@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | GTM SNIPE",
+  description: "Learn how GTM SNIPE handles and protects your data with our AI-powered strategy engine.",
+};
+
 export default function PrivacyPolicy() {
   const lastUpdated = "March 27, 2026";
 

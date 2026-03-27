@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Service | GTM SNIPE",
+  description: "Review the terms and conditions for using GTM SNIPE's AI-powered strategy engine.",
+};
+
 export default function TermsOfService() {
   const lastUpdated = "March 27, 2026";
 

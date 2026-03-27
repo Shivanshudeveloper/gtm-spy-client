@@ -15,8 +15,41 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "GTM SNIPE | The Kinetic Oracle Engine",
-  description: "AI-Powered GTM Strategy Sniper. Enter a URL to generate your multi-channel playbook.",
+  title: "GTM SNIPE | AI-Powered Multi-Channel Strategy Engine",
+  description: "Stop guessing. Start Snipping. GTM SNIPE analyzes any URL to generate a comprehensive, multi-channel growth playbook instantly.",
+  keywords: ["GTM strategy", "Marketing Automation", "AI Sales", "Growth Hacking", "SaaS Strategy"],
+  authors: [{ name: "Daksh Tyagi" }],
+  creator: "Daksh Tyagi",
+  publisher: "GTM SNIPE",
+  robots: "index, follow",
+  metadataBase: new URL("https://gtm-spy.vercel.app"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://gtm-spy.vercel.app",
+    title: "GTM SNIPE | The Kinetic Oracle Engine",
+    description: "Your AI-Powered GTM Strategy Sniper. Generate high-performance playbooks from any URL in seconds.",
+    siteName: "GTM SNIPE",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "GTM SNIPE Dashboard Preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GTM SNIPE | AI-Powered GTM Strategy",
+    description: "Generate comprehensive marketing and sales playbooks instantly with AI.",
+    images: ["/twitter-card.png"],
+    creator: "@DeveloperDaksh",
+  },
+  category: "technology",
 };
 
 export default function RootLayout({
