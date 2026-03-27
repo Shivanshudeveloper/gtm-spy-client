@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-surface: #0e0e12;
+  --color-surface-container-low: #131317;
+  --color-surface-container-high: #1f1f25;
+  --color-surface-container-highest: #25252b;
+  --color-surface-bright: #2c2b32;
+  --color-primary: #a1a6ff;
+  --color-primary-dim: #5860ff;
+  --color-secondary: #bf81ff;
+  --color-tertiary: #a1faff;
+  --color-tertiary-container: #00f4fe;
+  --color-outline-variant: #48474c;
+  --color-error: #ff6e84;
+  --color-on-surface: #ffffff;
+  --color-on-primary-fixed: #000000;
+  
+  --font-sans: var(--font-inter);
+  --font-headline: var(--font-jakarta);
+  
+  --shadow-neon: 0 0 5.5rem rgba(161, 166, 255, 0.08);
+  
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+
+  /* Use custom animation property for v4 */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-spin-3d: rotate3d 25s linear infinite;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-surface);
+    color: var(--color-on-surface);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.glow-sphere {
+    filter: blur(100px);
+    opacity: 0.25;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes rotate3d {
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+    100% { transform: rotateX(360deg) rotateY(720deg) rotateZ(360deg); }
+}
+
+/* Manual Marquee CSS to bypass any v4 utility issues */
+@keyframes marquee-ltr {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes marquee-ltr-2 {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes marquee-rtl {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes marquee-rtl-2 {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100%); }
+}
+
+.marquee-forward-1 { animation: marquee-ltr 80s linear infinite; }
+.marquee-forward-2 { animation: marquee-ltr-2 80s linear infinite; }
+.marquee-reverse-1 { animation: marquee-rtl 80s linear infinite; }
+.marquee-reverse-2 { animation: marquee-rtl-2 80s linear infinite; }
+
+/* Faster for logos */
+.marquee-fast-1 { animation: marquee-ltr 40s linear infinite; }
+.marquee-fast-2 { animation: marquee-ltr-2 40s linear infinite; }
+
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+.preserve-3d {
+    transform-style: preserve-3d;
+}
+
+/* Premium Glassmorphism Refinements */
+.glass-panel {
+    background: rgba(44, 43, 50, 0.4);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 
+        inset 0 1px 1px rgba(255, 255, 255, 0.05),
+        0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.glass-panel:hover {
+    border-color: rgba(161, 166, 255, 0.2);
+    box-shadow: 
+        inset 0 1px 1px rgba(255, 255, 255, 0.1),
+        0 0 30px rgba(161, 166, 255, 0.05);
+}
