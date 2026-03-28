@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="absolute top-1/4 left-1/4 w-150 h-150 bg-primary glow-sphere -z-10 rounded-full" />
       <div className="absolute bottom-1/4 right-1/4 w-125 h-125 bg-tertiary glow-sphere -z-10 rounded-full" />
 
-      <div className="max-w-5xl mx-auto flex flex-col items-center gap-20">
+      <div className="max-w-5xl mx-auto flex flex-col items-center gap-12 md:gap-20">
 
         {/* ── Text block ── */}
         <div className="flex flex-col items-center text-center gap-8 animate-in fade-in slide-in-from-bottom-8 duration-1000">
@@ -18,18 +18,18 @@ export default function Hero() {
             <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-secondary">AI-Powered GTM SNIPE Engine</span>
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-black font-headline leading-[1.05] tracking-tight-display bg-linear-to-br from-white to-primary bg-clip-text text-transparent max-w-4xl">
-            AI-Powered GTM<br />SNIPE Generator
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-black font-headline leading-[1.05] tracking-tight-display bg-linear-to-br from-white to-primary bg-clip-text text-transparent max-w-4xl">
+            AI-Powered GTM Generator
           </h1>
 
           <p className="text-xl md:text-2xl text-slate-400 max-w-2xl font-medium leading-relaxed">
-            Paste a competitor URL. Our Oracle engine decodes their strategy, maps ICPs, and hands you a complete GTM playbook in seconds.
+            Paste your website URL. Our Oracle engine decodes their strategy, maps ICPs, and hands you a complete GTM playbook in seconds.
           </p>
 
           <div className="flex items-center gap-4 pt-2">
             <Link
               href="https://app.gtmsnipe.com/signup"
-              className="group relative inline-flex items-center gap-2.5 bg-linear-to-r from-primary to-primary-dim text-on-primary-fixed px-10 py-4 rounded-xl font-bold text-base hover:shadow-neon transition-all active:scale-95 duration-200"
+              className="group relative inline-flex items-center gap-2 bg-linear-to-r from-primary to-primary-dim text-on-primary-fixed px-7 py-3.5 md:px-10 md:py-4 rounded-xl font-bold text-sm md:text-base hover:shadow-neon transition-all active:scale-95 duration-200"
             >
               <span className="material-symbols-outlined text-lg">rocket_launch</span>
               Create Free Account
