@@ -1,8 +1,10 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | GTM SNIPE",
-  description: "Review the terms and conditions for using GTM SNIPE's AI-powered strategy engine.",
+  title: "Terms of Service",
+  description: "Review the terms and conditions governing your use of GTM SNIPE's AI-powered go-to-market strategy generator.",
+  alternates: { canonical: "https://gtmsnipe.com/terms" },
+  robots: { index: true, follow: false },
 };
 
 export default function TermsOfService() {

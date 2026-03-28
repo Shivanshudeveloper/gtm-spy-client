@@ -43,7 +43,7 @@ export default function TestimonialMarquee() {
   const row3 = [...testimonials.slice(20, 30), ...testimonials.slice(20, 30), ...testimonials.slice(20, 30)];
 
   return (
-    <section id="testimonials-section" className="py-40 bg-surface overflow-hidden space-y-24 relative">
+    <section id="testimonials-section" className="pt-40 pb-12 bg-surface overflow-hidden space-y-24 relative">
       <div className="max-w-7xl mx-auto px-8 text-center mb-24 space-y-6">
         <h2 className="text-5xl md:text-6xl font-black font-headline tracking-tight-display">The Oracle's Track Record</h2>
         <p className="text-slate-400 text-xl font-medium max-w-2xl mx-auto">Real results from 50+ global strategy deployments and market audits.</p>
@@ -82,7 +82,7 @@ export default function TestimonialMarquee() {
       </div>
 
       {/* Decorative Glows / Trust Signal */}
-      <div className="max-w-7xl mx-auto px-8 pt-20 flex justify-center">
+      <div className="max-w-7xl mx-auto px-8 pt-10 flex justify-center">
          <div className="px-10 py-5 glass-panel rounded-full flex items-center gap-6 border border-white/10">
             <div className="flex -space-x-3">
                {[1,2,3,4,5].map(i => (

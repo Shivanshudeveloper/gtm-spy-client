@@ -13,9 +13,9 @@ export default function Navigation() {
         <Link href="#outputs-section" className="text-slate-400 hover:text-white transition-colors font-medium">Outputs</Link>
         <Link href="#pricing-section" className="text-slate-400 hover:text-white transition-colors font-medium">Pricing</Link>
       </div>
-      <div className="flex items-center gap-4">
-        <button className="text-slate-400 hover:text-white transition-colors px-4 py-2 text-sm font-bold">Log In</button>
-        <button className="bg-gradient-to-r from-primary to-primary-dim text-on-primary-fixed px-8 py-3 rounded-xl font-bold text-sm hover:shadow-neon transition-all active:scale-95 duration-200">Start Free</button>
+      <div className="flex items-center gap-3">
+        <Link href="https://app.gtmsnipe.com/signin" className="text-slate-400 hover:text-white transition-colors px-4 py-2 text-sm font-bold">Login</Link>
+        <Link href="https://app.gtmsnipe.com/signup" className="bg-linear-to-r from-primary to-primary-dim text-on-primary-fixed px-6 py-2.5 rounded-xl font-bold text-sm hover:shadow-neon transition-all active:scale-95 duration-200 whitespace-nowrap">Create Free Account</Link>
       </div>
     </nav>
   );

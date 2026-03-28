@@ -1,3 +1,12 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Refund Policy",
+  description: "Understand GTM SNIPE's refund and cancellation policy for AI-generated go-to-market strategy reports.",
+  alternates: { canonical: "https://gtmsnipe.com/refund" },
+  robots: { index: true, follow: false },
+};
+
 export default function RefundPolicy() {
   const lastUpdated = "March 27, 2026";
 

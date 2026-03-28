@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://gtm-spy.vercel.app/sitemap.xml
+Sitemap: https://gtmsnipe.com/sitemap.xml
