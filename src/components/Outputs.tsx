@@ -76,6 +76,36 @@ function GoogleTrendsPreview() {
   );
 }
 
+function AIVisibilityPreview() {
+  const engines = [
+    { name: "ChatGPT", score: 78, cited: true },
+    { name: "Perplexity", score: 91, cited: true },
+    { name: "Gemini", score: 32, cited: false },
+    { name: "Claude", score: 18, cited: false },
+  ];
+  return (
+    <div className="space-y-2.5 w-full">
+      {engines.map((e, i) => (
+        <div key={i} className="space-y-1">
+          <div className="flex justify-between items-center">
+            <span className="text-[10px] font-black text-slate-300">{e.name}</span>
+            <span className={`text-[9px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded ${e.cited ? "bg-primary/20 text-primary" : "bg-white/5 text-slate-500"}`}>
+              {e.cited ? "Cited" : "Not found"}
+            </span>
+          </div>
+          <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+            <div
+              className={`h-full rounded-full ${e.cited ? "bg-linear-to-r from-primary to-secondary" : "bg-white/10"}`}
+              style={{ width: `${e.score}%` }}
+            />
+          </div>
+        </div>
+      ))}
+      <p className="text-[10px] text-slate-400 font-medium pt-1">Overall AI Visibility: <span className="text-primary font-bold">54 / 100</span></p>
+    </div>
+  );
+}
+
 export default function Outputs() {
   const [activePreview, setActivePreview] = useState<number | null>(null);
 
@@ -146,6 +176,15 @@ export default function Outputs() {
       glowColor: "bg-tertiary/5",
       badge: "New",
     },
+    {
+      icon: "travel_explore",
+      title: "AI Visibility Check",
+      desc: "See how visible your brand is across ChatGPT, Gemini, Perplexity, and Claude — own AI mindshare before your competitors do.",
+      preview: <AIVisibilityPreview />,
+      accent: "text-primary",
+      glowColor: "bg-primary/5",
+      badge: "New",
+    },
   ];
 
   return (
@@ -156,7 +195,7 @@ export default function Outputs() {
           <p className="text-slate-400 text-xl font-medium max-w-2xl">High-fidelity strategic outputs delivered with tactical precision.</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {cards.map((card, idx) => (
             <div
               key={idx}
@@ -166,10 +205,10 @@ export default function Outputs() {
             >
               {/* Animated Accent Line */}
               <div className={`absolute top-0 left-0 w-full h-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-marquee ${
-                card.badge
-                  ? card.accent === "text-secondary"
-                    ? "bg-linear-to-r from-secondary via-primary to-secondary"
-                    : "bg-linear-to-r from-tertiary via-primary to-tertiary"
+                card.accent === "text-secondary"
+                  ? "bg-linear-to-r from-secondary via-primary to-secondary"
+                  : card.accent === "text-tertiary"
+                  ? "bg-linear-to-r from-tertiary via-primary to-tertiary"
                   : "bg-linear-to-r from-primary via-tertiary to-primary"
               }`}></div>
 
@@ -181,7 +220,9 @@ export default function Outputs() {
                 <div className={`absolute top-4 right-4 text-[9px] font-black uppercase tracking-[0.2em] px-2 py-1 rounded-full border ${
                   card.accent === "text-secondary"
                     ? "border-secondary/30 text-secondary bg-secondary/10"
-                    : "border-tertiary/30 text-tertiary bg-tertiary/10"
+                    : card.accent === "text-tertiary"
+                    ? "border-tertiary/30 text-tertiary bg-tertiary/10"
+                    : "border-primary/30 text-primary bg-primary/10"
                 }`}>
                   {card.badge}
                 </div>

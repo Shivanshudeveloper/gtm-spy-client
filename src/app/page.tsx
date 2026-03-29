@@ -1,6 +1,7 @@
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import Outputs from "@/components/Outputs";
+import SujataAI from "@/components/SujataAI";
 import TestimonialMarquee from "@/components/TestimonialMarquee";
 import Pricing from "@/components/Pricing";
 
@@ -18,7 +19,11 @@ export default function Home() {
       <section id="outputs-section" className="animate-in fade-in slide-in-from-bottom-10 duration-1000">
           <Outputs />
       </section>
-      
+
+      <section className="animate-in fade-in slide-in-from-bottom-10 duration-1000">
+          <SujataAI />
+      </section>
+
       <section id="how-it-works-section" className="animate-in fade-in slide-in-from-bottom-10 duration-1000">
           <HowItWorks />
       </section>
