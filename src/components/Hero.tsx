@@ -1,7 +1,12 @@
+"use client";
+
 import Link from "next/link";
-import DashboardSlideshow from "./DashboardSlideshow";
+import dynamic from "next/dynamic";
 import LogoMarquee from "./LogoMarquee";
-import LiquidEther from "./LiquidEther";
+
+const DashboardSlideshow = dynamic(() => import("./DashboardSlideshow"), { ssr: false });
+
+const LiquidEther = dynamic(() => import("./LiquidEther"), { ssr: false });
 
 export default function Hero() {
   return (
@@ -10,13 +15,15 @@ export default function Hero() {
         <LiquidEther
           colors={['#a1a6ff', '#bf81ff', '#a1faff']}
           mouseForce={20}
-          cursorSize={100}
-          isViscous
-          viscous={30}
-          resolution={0.5}
+          cursorSize={80}
+          isViscous={false}
+          iterationsPoisson={12}
+          iterationsViscous={12}
+          BFECC={false}
+          resolution={0.25}
           autoDemo
-          autoSpeed={0.5}
-          autoIntensity={2.2}
+          autoSpeed={0.4}
+          autoIntensity={2.0}
           takeoverDuration={0.25}
           autoResumeDelay={3000}
           autoRampDuration={0.6}
