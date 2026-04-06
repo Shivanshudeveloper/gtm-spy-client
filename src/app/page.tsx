@@ -4,6 +4,7 @@ import Outputs from "@/components/Outputs";
 import SujataAI from "@/components/SujataAI";
 import TestimonialMarquee from "@/components/TestimonialMarquee";
 import Pricing from "@/components/Pricing";
+import SupportSection from "@/components/SupportSection";
 
 export default function Home() {
   return (
@@ -30,6 +31,10 @@ export default function Home() {
       
       <section id="pricing-section" className="animate-in fade-in slide-in-from-bottom-10 duration-1000">
           <Pricing />
+      </section>
+
+      <section className="animate-in fade-in slide-in-from-bottom-10 duration-1000">
+          <SupportSection />
       </section>
     </div>
   );
