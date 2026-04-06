@@ -1,13 +1,28 @@
 import Link from "next/link";
 import DashboardSlideshow from "./DashboardSlideshow";
 import LogoMarquee from "./LogoMarquee";
+import LiquidEther from "./LiquidEther";
 
 export default function Hero() {
   return (
     <main className="relative pt-28 pb-20 md:pt-36 md:pb-32 px-8 overflow-hidden">
-      {/* Ambient glows */}
-      <div className="absolute top-1/4 left-1/4 w-150 h-150 bg-primary glow-sphere -z-10 rounded-full" />
-      <div className="absolute bottom-1/4 right-1/4 w-125 h-125 bg-tertiary glow-sphere -z-10 rounded-full" />
+      <div className="absolute inset-0 -z-10">
+        <LiquidEther
+          colors={['#a1a6ff', '#bf81ff', '#a1faff']}
+          mouseForce={20}
+          cursorSize={100}
+          isViscous
+          viscous={30}
+          resolution={0.5}
+          autoDemo
+          autoSpeed={0.5}
+          autoIntensity={2.2}
+          takeoverDuration={0.25}
+          autoResumeDelay={3000}
+          autoRampDuration={0.6}
+          style={{ width: '100%', height: '100%' }}
+        />
+      </div>
 
       <div className="max-w-5xl mx-auto flex flex-col items-center gap-12 md:gap-20">
 
