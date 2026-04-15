@@ -1,6 +1,6 @@
 export default function SupportSection() {
   return (
-    <section className="py-24 bg-surface relative overflow-hidden">
+    <section id="support-section" className="py-24 bg-surface relative overflow-hidden">
       {/* Ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-tertiary/8 rounded-full blur-[120px] -z-10" />
 

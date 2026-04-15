@@ -5,28 +5,19 @@ import LogoMarquee from "./LogoMarquee";
 
 const DashboardSlideshow = dynamic(() => import("./DashboardSlideshow"), { ssr: false });
 
-const LiquidEther = dynamic(() => import("./LiquidEther"), { ssr: false });
+const DarkVeil = dynamic(() => import("./DarkVeil"), { ssr: false });
 
 export default function Hero() {
   return (
     <main className="relative pt-28 pb-20 md:pt-36 md:pb-32 px-8 overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        <LiquidEther
-          colors={['#a1a6ff', '#bf81ff', '#a1faff']}
-          mouseForce={20}
-          cursorSize={80}
-          isViscous={false}
-          iterationsPoisson={12}
-          iterationsViscous={12}
-          BFECC={false}
-          resolution={0.25}
-          autoDemo
-          autoSpeed={0.4}
-          autoIntensity={2.0}
-          takeoverDuration={0.25}
-          autoResumeDelay={3000}
-          autoRampDuration={0.6}
-          style={{ width: '100%', height: '100%' }}
+        <DarkVeil
+          hueShift={0}
+          noiseIntensity={0}
+          scanlineIntensity={0}
+          speed={1}
+          scanlineFrequency={0}
+          warpAmount={0}
         />
       </div>
 

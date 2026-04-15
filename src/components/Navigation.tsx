@@ -7,6 +7,7 @@ const navLinks = [
   { label: "How it works", href: "#how-it-works-section" },
   { label: "Outputs", href: "#outputs-section" },
   { label: "Pricing", href: "#pricing-section" },
+  { label: "Contact Support", href: "#support-section" },
 ];
 
 export default function Navigation() {
