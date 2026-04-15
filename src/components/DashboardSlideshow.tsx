@@ -4,10 +4,11 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 
 const slides = [
-  { src: "https://res.cloudinary.com/daboha8rt/image/upload/v1774808633/try/img1_u6yx4d.png", alt: "GTM SNIPE – Strategy Overview" },
-  { src: "https://res.cloudinary.com/daboha8rt/image/upload/v1774808634/try/img2_jvvsis.png", alt: "GTM SNIPE – ICP Analysis" },
-  { src: "https://res.cloudinary.com/daboha8rt/image/upload/v1774808634/try/img3_ysvruk.png", alt: "GTM SNIPE – Competitor Audit" },
-  { src: "https://res.cloudinary.com/daboha8rt/image/upload/v1774808633/try/img4_sqrxud.png", alt: "GTM SNIPE – Campaign Output" },
+  { src: "/assets/img1.png", alt: "GTM SNIPE – Strategy Overview" },
+  { src: "/assets/img3.png", alt: "GTM SNIPE – Competitor Audit" },
+  { src: "/assets/img2.png", alt: "GTM SNIPE – ICP Analysis" },
+  { src: "/assets/img4.png", alt: "GTM SNIPE – Campaign Output" },
+  { src: "/assets/img5.png", alt: "GTM SNIPE – Playbook Builder" },
 ];
 
 export default function DashboardSlideshow() {
@@ -27,7 +28,7 @@ export default function DashboardSlideshow() {
   }, [transitioning, active]);
 
   useEffect(() => {
-    const t = setInterval(() => goTo((active + 1) % slides.length), 4000);
+    const t = setInterval(() => goTo((active + 1) % slides.length), 3500);
     return () => clearInterval(t);
   }, [active, goTo]);
 

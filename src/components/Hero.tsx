@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import dynamic from "next/dynamic";
 import LogoMarquee from "./LogoMarquee";
 
@@ -48,15 +47,19 @@ export default function Hero() {
             Paste your website URL. Our Oracle engine decodes their strategy, maps ICPs, and hands you a complete GTM playbook in seconds.
           </p>
 
-          <div className="flex items-center gap-4 pt-2">
-            <Link
+          <div className="flex items-center w-full max-w-xl bg-white/5 border border-white/10 rounded-2xl px-3 py-2 gap-2 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all pt-2">
+            <input
+              type="url"
+              placeholder="Enter your website URL"
+              className="flex-1 bg-transparent text-white placeholder-slate-500 px-2 py-1.5 text-sm md:text-base focus:outline-none"
+            />
+            <a
               href="https://app.gtmsnipe.com/signup"
-              className="group relative inline-flex items-center gap-2 bg-linear-to-r from-primary to-primary-dim text-on-primary-fixed px-7 py-3.5 md:px-10 md:py-4 rounded-xl font-bold text-sm md:text-base hover:shadow-neon transition-all active:scale-95 duration-200"
+              className="group inline-flex items-center justify-center gap-1.5 bg-linear-to-r from-primary to-primary-dim text-on-primary-fixed px-5 py-2.5 rounded-xl font-bold text-sm hover:shadow-neon transition-all active:scale-95 duration-200 whitespace-nowrap shrink-0"
             >
-              <span className="material-symbols-outlined text-lg">rocket_launch</span>
-              Create Free Account
-              <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-            </Link>
+              <span className="material-symbols-outlined text-base">rocket_launch</span>
+              Create GTM Strategy
+            </a>
           </div>
 
           <p className="text-xs text-slate-500 font-medium">No credit card required &nbsp;·&nbsp; First strategy free</p>

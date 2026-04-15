@@ -106,6 +106,31 @@ function AIVisibilityPreview() {
   );
 }
 
+function HighIntentPreview() {
+  const profiles = [
+    { name: "Arjun Mehta", role: "Founder & CEO", signal: "Commented on ZoomInfo pricing", score: 94 },
+    { name: "Sarah Okonkwo", role: "Co-Founder", signal: "Post: 'outbound is broken'", score: 87 },
+    { name: "Liam Torres", role: "CEO", signal: "Liked 3 sales-stack threads", score: 81 },
+  ];
+  return (
+    <div className="space-y-3 w-full">
+      {profiles.map((p, i) => (
+        <div key={i} className="flex items-center gap-3 bg-white/5 rounded-lg px-3 py-2.5">
+          <div className="w-7 h-7 rounded-full bg-linear-to-br from-primary/40 to-secondary/40 flex items-center justify-center shrink-0">
+            <span className="material-symbols-outlined text-white" style={{ fontSize: "14px" }}>person</span>
+          </div>
+          <div className="min-w-0 flex-1">
+            <p className="text-[11px] font-black text-white">{p.name} <span className="font-medium text-slate-400">· {p.role}</span></p>
+            <p className="text-[10px] text-slate-400 truncate">{p.signal}</p>
+          </div>
+          <span className="text-[10px] font-black text-secondary shrink-0">{p.score}</span>
+        </div>
+      ))}
+      <p className="text-[10px] text-slate-400 font-medium pt-0.5">Streamed live · resumes where you left off</p>
+    </div>
+  );
+}
+
 export default function Outputs() {
   const [activePreview, setActivePreview] = useState<number | null>(null);
 
@@ -183,6 +208,15 @@ export default function Outputs() {
       preview: <AIVisibilityPreview />,
       accent: "text-primary",
       glowColor: "bg-primary/5",
+      badge: "New",
+    },
+    {
+      icon: "person_search",
+      title: "High Intent Profiles",
+      desc: "Find LinkedIn founders and CEOs whose activity matches what ZoomInfo sells. We search Google (Serper), enrich each profile with recent posts and comments, then score with AI. Results stream in as they are ready. If you stop early, the next run continues without repeating people you already have.",
+      preview: <HighIntentPreview />,
+      accent: "text-secondary",
+      glowColor: "bg-secondary/5",
       badge: "New",
     },
   ];

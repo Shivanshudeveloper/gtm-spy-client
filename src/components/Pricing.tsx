@@ -3,14 +3,14 @@
 import { useState } from "react";
 import Link from "next/link";
 
-const PRICE_PER_CREDIT = 5;
+const PRICE_PER_CREDIT = 19.99;
 const MAX_CREDITS = 40;
 const MIN_CREDITS = 1;
 
 export default function Pricing() {
-  const [credits, setCredits] = useState(5);
+  const [credits, setCredits] = useState(1);
 
-  const total = credits * PRICE_PER_CREDIT;
+  const total = (Math.round(credits * PRICE_PER_CREDIT * 100) / 100).toFixed(2);
   const pct = ((credits - MIN_CREDITS) / (MAX_CREDITS - MIN_CREDITS)) * 100;
 
   return (
@@ -44,7 +44,7 @@ export default function Pricing() {
                 <span className="text-[11px] font-black uppercase tracking-widest text-slate-400">Credits Selected</span>
                 <div className="flex items-center gap-2">
                   <span className="text-5xl font-black text-white tabular-nums">{credits}</span>
-                  <span className="text-slate-500 font-bold text-sm">× $5</span>
+                  <span className="text-slate-500 font-bold text-sm">× $19.99</span>
                 </div>
               </div>
 
