@@ -4,11 +4,10 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 
 const slides = [
-  { src: "/assets/img1.png", alt: "GTM SNIPE – Strategy Overview" },
-  { src: "/assets/img3.png", alt: "GTM SNIPE – Competitor Audit" },
-  { src: "/assets/img2.png", alt: "GTM SNIPE – ICP Analysis" },
-  { src: "/assets/img4.png", alt: "GTM SNIPE – Campaign Output" },
-  { src: "/assets/img5.png", alt: "GTM SNIPE – Playbook Builder" },
+  { src: "https://res.cloudinary.com/daboha8rt/image/upload/v1776248733/gtmsnipe/img1_iax6nx.png", alt: "GTM SNIPE – Strategy Overview" },
+  { src: "https://res.cloudinary.com/daboha8rt/image/upload/v1776248734/gtmsnipe/img3_rzivbw.png", alt: "GTM SNIPE – Competitor Audit" },
+  { src: "https://res.cloudinary.com/daboha8rt/image/upload/v1776248733/gtmsnipe/img2_u1tzs6.png", alt: "GTM SNIPE – ICP Analysis" },
+  { src: "https://res.cloudinary.com/daboha8rt/image/upload/v1776248733/gtmsnipe/img4_yyg10d.png", alt: "GTM SNIPE – Campaign Output" },
 ];
 
 export default function DashboardSlideshow() {
