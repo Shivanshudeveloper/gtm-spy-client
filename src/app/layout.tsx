@@ -39,6 +39,16 @@ export const metadata: Metadata = {
     "channel strategy",
     "startup marketing",
     "GTM SNIPE",
+    "LinkedIn prospecting",
+    "high intent leads",
+    "Reddit demand validation",
+    "Google Trends analysis",
+    "AI visibility",
+    "answer engine optimization",
+    "B2B lead generation",
+    "sales intelligence",
+    "competitive intelligence",
+    "ZoomInfo alternative",
   ],
   authors: [{ name: "Daksh Tyagi" }],
   creator: "Daksh Tyagi",
@@ -86,6 +96,13 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  verification: {
+    // Replace these values with your actual codes from Google Search Console / Bing Webmaster Tools
+    google: "REPLACE_WITH_GOOGLE_VERIFICATION_CODE",
+    other: {
+      "msvalidate.01": "REPLACE_WITH_BING_VERIFICATION_CODE",
+    },
+  },
   other: {
     "theme-color": "#0e0e12",
   },
@@ -105,7 +122,7 @@ const jsonLd = {
         "@type": "SearchAction",
         target: {
           "@type": "EntryPoint",
-          urlTemplate: `${BASE_URL}/?q={search_term_string}`,
+          urlTemplate: `https://app.gtmsnipe.com/signup?url={search_term_string}`,
         },
         "query-input": "required name=search_term_string",
       },
@@ -121,9 +138,9 @@ const jsonLd = {
         "GTM SNIPE is an AI-powered go-to-market strategy generator. Paste a competitor URL and receive a complete playbook covering ICP mapping, competitive audit, AEO ranking, Google Trends analysis, Reddit demand validation, and plug-and-play campaign output.",
       offers: {
         "@type": "Offer",
-        price: "999",
-        priceCurrency: "INR",
-        description: "Pay-per-strategy. No subscription required.",
+        price: "19.99",
+        priceCurrency: "USD",
+        description: "Pay-per-credit. No subscription required.",
       },
       creator: {
         "@type": "Person",

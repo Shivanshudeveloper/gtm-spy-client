@@ -1,32 +1,32 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from "next";
+
+const BASE_URL = "https://gtmsnipe.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://gtmsnipe.com'
-
   return [
     {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1,
+      url: BASE_URL,
+      lastModified: new Date("2026-04-15"),
+      changeFrequency: "weekly",
+      priority: 1.0,
     },
     {
-      url: `${baseUrl}/privacy`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.5,
+      url: `${BASE_URL}/privacy`,
+      lastModified: new Date("2026-04-01"),
+      changeFrequency: "monthly",
+      priority: 0.3,
     },
     {
-      url: `${baseUrl}/refund`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.5,
+      url: `${BASE_URL}/terms`,
+      lastModified: new Date("2026-04-01"),
+      changeFrequency: "monthly",
+      priority: 0.3,
     },
     {
-      url: `${baseUrl}/terms`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.5,
+      url: `${BASE_URL}/refund`,
+      lastModified: new Date("2026-04-01"),
+      changeFrequency: "monthly",
+      priority: 0.3,
     },
-  ]
+  ];
 }
