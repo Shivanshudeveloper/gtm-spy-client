@@ -9,7 +9,7 @@ const DarkVeil = dynamic(() => import("./DarkVeil"), { ssr: false });
 
 export default function Hero() {
   return (
-    <main className="relative pt-28 pb-20 md:pt-36 md:pb-32 px-8 overflow-hidden">
+    <main className="relative pt-28 pb-20 md:pt-36 md:pb-32 px-5 md:px-8 overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <DarkVeil
           hueShift={0}
@@ -38,15 +38,17 @@ export default function Hero() {
             Paste your website URL. Our Oracle engine decodes their strategy, maps ICPs, and hands you a complete GTM playbook in seconds.
           </p>
 
-          <div className="flex items-center w-full max-w-xl bg-white/5 border border-white/10 rounded-2xl px-3 py-2 gap-2 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all pt-2">
-            <input
-              type="url"
-              placeholder="Enter your website URL"
-              className="flex-1 bg-transparent text-white placeholder-slate-500 px-2 py-1.5 text-sm md:text-base focus:outline-none"
-            />
+          <div className="flex flex-col sm:flex-row sm:items-center w-full max-w-xl gap-2">
+            <div className="flex items-center flex-1 bg-white/5 border border-white/10 rounded-2xl px-3 py-2 gap-2 focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all">
+              <input
+                type="url"
+                placeholder="Enter your website URL"
+                className="flex-1 bg-transparent text-white placeholder-slate-500 px-2 py-1.5 text-sm md:text-base focus:outline-none min-w-0"
+              />
+            </div>
             <a
               href="https://app.gtmsnipe.com/signup"
-              className="group inline-flex items-center justify-center gap-1.5 bg-linear-to-r from-primary to-primary-dim text-on-primary-fixed px-5 py-2.5 rounded-xl font-bold text-sm hover:shadow-neon transition-all active:scale-95 duration-200 whitespace-nowrap shrink-0"
+              className="group inline-flex items-center justify-center gap-1.5 bg-linear-to-r from-primary to-primary-dim text-on-primary-fixed px-5 py-3 sm:py-2.5 rounded-xl font-bold text-sm hover:shadow-neon transition-all active:scale-95 duration-200 whitespace-nowrap shrink-0"
             >
               <span className="material-symbols-outlined text-base">rocket_launch</span>
               Create GTM Strategy

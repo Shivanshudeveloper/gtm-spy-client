@@ -45,8 +45,8 @@ export default function Footer() {
           <div className="md:col-span-3 space-y-6">
             <h4 className="text-sm font-black uppercase tracking-widest text-white">Newsletter</h4>
             <div className="flex gap-2">
-               <input type="email" placeholder="Email" className="bg-surface-container-highest border border-white/10 rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-primary/50 transition-colors" />
-               <button className="p-2 bg-primary rounded-lg text-black hover:bg-white transition-colors">
+               <input type="email" placeholder="Email" className="bg-surface-container-highest border border-white/10 rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-primary/50 transition-colors min-w-0" />
+               <button className="shrink-0 p-2 bg-primary rounded-lg text-black hover:bg-white transition-colors">
                   <span className="material-symbols-outlined text-sm">send</span>
                </button>
             </div>

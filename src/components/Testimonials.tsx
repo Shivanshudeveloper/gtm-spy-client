@@ -21,20 +21,20 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-40 bg-surface-container-low relative overflow-hidden">
+    <section className="py-20 md:py-40 bg-surface-container-low relative overflow-hidden">
       {/* 3D Accents */}
       <div className="absolute top-20 right-10 w-12 h-12 bg-primary/20 rounded-2xl rotate-45 animate-float blur-[2px] -z-10 border border-primary/30"></div>
       <div className="absolute bottom-20 left-10 w-10 h-10 bg-tertiary/20 rounded-full animate-float-delayed blur-[1px] -z-10 border border-tertiary/30"></div>
       
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="text-center mb-24">
-          <h2 className="text-5xl md:text-6xl font-extrabold font-headline mb-6 tracking-tight-display">Trusted by Growth Leaders</h2>
-          <p className="text-slate-400 text-xl font-medium max-w-2xl mx-auto">See how global teams are scaling their GTM operations with AI-powered precision.</p>
+      <div className="max-w-7xl mx-auto px-5 md:px-8">
+        <div className="text-center mb-12 md:mb-24">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold font-headline mb-4 md:mb-6 tracking-tight-display">Trusted by Growth Leaders</h2>
+          <p className="text-slate-400 text-base md:text-xl font-medium max-w-2xl mx-auto">See how global teams are scaling their GTM operations with AI-powered precision.</p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
           {testimonials.map((t, idx) => (
-            <div key={idx} className="bg-surface-container-high p-10 rounded-xl flex flex-col justify-between group hover:shadow-neon transition-all duration-300">
+            <div key={idx} className="bg-surface-container-high p-6 md:p-10 rounded-xl flex flex-col justify-between group hover:shadow-neon transition-all duration-300">
               <div className="space-y-8">
                 <div className="flex gap-1.5">
                   <span className="material-symbols-outlined text-primary text-lg">star</span>

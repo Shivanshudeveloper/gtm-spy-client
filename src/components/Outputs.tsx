@@ -222,11 +222,11 @@ export default function Outputs() {
   ];
 
   return (
-    <section id="outputs-section" className="pt-12 pb-40 bg-surface relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-8">
-        <div className="mb-24 text-center md:text-left">
-          <h2 className="text-5xl md:text-6xl font-extrabold font-headline mb-6 tracking-tight-display">The Oracle Intelligence Deck</h2>
-          <p className="text-slate-400 text-xl font-medium max-w-2xl">High-fidelity strategic outputs delivered with tactical precision.</p>
+    <section id="outputs-section" className="pt-12 pb-20 md:pb-40 bg-surface relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-5 md:px-8">
+        <div className="mb-12 md:mb-24 text-center md:text-left">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-extrabold font-headline mb-4 md:mb-6 tracking-tight-display">The Oracle Intelligence Deck</h2>
+          <p className="text-slate-400 text-base md:text-xl font-medium max-w-2xl">High-fidelity strategic outputs delivered with tactical precision.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

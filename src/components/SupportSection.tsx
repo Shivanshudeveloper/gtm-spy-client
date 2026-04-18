@@ -6,7 +6,7 @@ export default function SupportSection() {
 
       <div className="max-w-3xl mx-auto px-8 text-center">
         {/* Card */}
-        <div className="glass-panel rounded-3xl border border-white/10 px-10 py-14 md:px-16 space-y-8 shadow-[0_0_60px_rgba(161,250,255,0.04)]">
+        <div className="glass-panel rounded-3xl border border-white/10 px-6 py-10 md:px-16 md:py-14 space-y-8 shadow-[0_0_60px_rgba(161,250,255,0.04)]">
           {/* Icon */}
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-tertiary/10 border border-tertiary/20 mx-auto">
             <span className="material-symbols-outlined text-tertiary text-3xl">support_agent</span>
@@ -33,7 +33,7 @@ export default function SupportSection() {
           </a>
 
           {/* Response time badges */}
-          <div className="flex items-center justify-center gap-6 pt-2">
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 pt-2">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
               <span className="text-xs font-black uppercase tracking-widest text-slate-400">Responds in &lt; 24 hrs</span>
