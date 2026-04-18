@@ -237,8 +237,8 @@ export default function Outputs() {
               onMouseLeave={() => setActivePreview(null)}
               className="glass-panel relative p-8 rounded-2xl group transition-all duration-500 shadow-neon overflow-hidden border border-white/5 cursor-pointer h-95 flex flex-col justify-start"
             >
-              {/* Animated Accent Line */}
-              <div className={`absolute top-0 left-0 w-full h-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-marquee ${
+              {/* Animated Accent Line — desktop hover only */}
+              <div className={`absolute top-0 left-0 w-full h-0.5 opacity-0 md:group-hover:opacity-100 transition-opacity duration-700 animate-marquee ${
                 card.accent === "text-secondary"
                   ? "bg-linear-to-r from-secondary via-primary to-secondary"
                   : card.accent === "text-tertiary"
@@ -246,8 +246,8 @@ export default function Outputs() {
                   : "bg-linear-to-r from-primary via-tertiary to-primary"
               }`}></div>
 
-              {/* Background Glow */}
-              <div className={`absolute inset-0 ${card.glowColor} opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>
+              {/* Background Glow — desktop hover only */}
+              <div className={`absolute inset-0 ${card.glowColor} opacity-0 md:group-hover:opacity-100 transition-opacity duration-700`}></div>
 
               {/* New Badge */}
               {card.badge && (
@@ -262,8 +262,8 @@ export default function Outputs() {
                 </div>
               )}
 
-              {/* Original Content Wrapper (Fades out on hover) */}
-              <div className="relative z-10 space-y-6 transition-all duration-500 group-hover:opacity-0 group-hover:-translate-y-10 group-hover:pointer-events-none">
+              {/* Original Content — always visible on mobile, fades out on desktop hover */}
+              <div className="relative z-10 space-y-6 transition-all duration-500 md:group-hover:opacity-0 md:group-hover:-translate-y-10 md:group-hover:pointer-events-none">
                 <div className="w-14 h-14 rounded-full bg-surface-container-highest flex items-center justify-center relative border border-white/10">
                   <div className={`absolute inset-0 blur-xl opacity-20 filter rounded-full ${
                     card.accent === "text-secondary" ? "bg-secondary" : card.accent === "text-tertiary" ? "bg-tertiary" : "bg-tertiary-container"
@@ -277,9 +277,9 @@ export default function Outputs() {
                 </div>
               </div>
 
-              {/* Interactive Preview Content (Fades in on hover) */}
+              {/* Interactive Preview — desktop only, hidden entirely on mobile */}
               <div
-                className={`absolute inset-0 p-8 flex flex-col justify-center bg-surface-container-highest transition-all duration-500 transform ${
+                className={`absolute inset-0 p-8 hidden md:flex flex-col justify-center bg-surface-container-highest transition-all duration-500 transform ${
                   activePreview === idx ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0 pointer-events-none"
                 }`}
               >
